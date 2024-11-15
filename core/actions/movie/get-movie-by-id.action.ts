@@ -11,8 +11,6 @@ export const getMovieByIdAction = async ( id: number | string ): Promise<Complet
 
         const { data } = await movieApi.get<MovieDBMovieResponse>(`/${id}`);
 
-        console.log('Pelicula http cargada...')
-
         return MovieMapper.fromTheMovieDBToCompleteMovie(data);
         
     } catch (error) {

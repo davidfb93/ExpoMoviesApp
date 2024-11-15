@@ -64,7 +64,7 @@ const MovieHeader = ( {title, originalTitle, poster} : Props ) => {
         </View>
 
         <View className='px-5 mt-1' style = {{ backgroundColor: '#14161E' }}>
-            <Text className='font-normal color-white'>{ originalTitle }</Text>
+            <Text className='font-normal color-white mt-3'>{ originalTitle }</Text>
             <Text className='font-semibold text-2xl color-white'>{ title }</Text>
         </View>
 

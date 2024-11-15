@@ -28,7 +28,7 @@ const MovieScreen = () => {
         poster={movieQuery.data.poster}
       />
 
-      <MovieDescription />
+      <MovieDescription movie = { movieQuery.data } />
 
 
     </ScrollView>
