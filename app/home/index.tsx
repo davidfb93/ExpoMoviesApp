@@ -39,7 +39,11 @@ const HomeScreen = () => {
       {/* Flatlist peliculas popular - requisito técnico */}
       < MovieHorizontalList title = 'Populares' movies={ popularQuery.data ?? []} />
 
-      < MovieHorizontalList title = 'Mejor Calificadas' movies={ topRatedQuery.data ?? []} />
+      < MovieHorizontalList 
+        title = 'Mejor Calificadas' 
+        movies={ topRatedQuery.data?.pages.flat() ?? []} 
+        loadNextPage={ topRatedQuery.fetchNextPage }
+        />
 
       < MovieHorizontalList title = 'Próximamente en cines' movies={ upcomingQuery.data ?? []} />
 

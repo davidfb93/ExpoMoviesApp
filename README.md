@@ -36,7 +36,7 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
     );
    ```
 
-4. Copy .env.template file, and place the api_key of the moviesDB
+4. Copy .env.template file, rename to .env and place the moviesDB api_key in the .env file.
 
    ```bash
     https://www.themoviedb.org/settings/api
