@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     paddingBottom: 10
   },
   flatlist: {
-    paddingBottom: 20
+    paddingBottom: 20,  
   }
 })
 
