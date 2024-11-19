@@ -41,7 +41,7 @@ const HomeScreen = () => {
 
         <SearchScreen />
 
-        {/* Carrusel principal - En cartelera - Uso de librerias externas */}
+        {/* Carrusel principal - En cartelera */}
         <Text style={styles.title}>En cartelera</Text>
         <MainSlideshow movies={nowPlayingQuery.data ?? []} />
 
