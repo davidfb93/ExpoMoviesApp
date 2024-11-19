@@ -14,8 +14,8 @@ interface Props {
 
 const { width } = Dimensions.get('window');
 const ITEM_WIDTH = 200;
-const ITEM_HEIGHT = 350; 
-const ITEM_SPACING = (width - ITEM_WIDTH) / 2; 
+const ITEM_HEIGHT = 350;
+const ITEM_SPACING = (width - ITEM_WIDTH) / 2;
 
 const MainSlideshow = ({ movies }: Props) => {
     const scrollX = useRef(new Animated.Value(0)).current;
@@ -37,6 +37,12 @@ const MainSlideshow = ({ movies }: Props) => {
                     [{ nativeEvent: { contentOffset: { x: scrollX } } }],
                     { useNativeDriver: true }
                 )}
+                initialScrollIndex={1}
+                getItemLayout={(data, index) => ({
+                    length: ITEM_WIDTH,
+                    offset: ITEM_WIDTH * index,
+                    index,
+                })}
                 renderItem={({ item, index }) => {
                     const inputRange = [
                         (index - 1) * ITEM_WIDTH,
@@ -46,7 +52,7 @@ const MainSlideshow = ({ movies }: Props) => {
 
                     const scale = scrollX.interpolate({
                         inputRange,
-                        outputRange: [0.8, 1, 0.8], 
+                        outputRange: [0.8, 1, 0.8],
                         extrapolate: 'clamp',
                     });
 
